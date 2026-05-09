@@ -1201,7 +1201,6 @@ body.modal-open { overflow: hidden; }
   .modal-gallery.images .gallery-img {
     height: auto;
     max-height: 380px;
-    min-height: 220px;
     object-fit: contain;
     background: oklch(0.10 0.005 250);
     padding: 8px;
@@ -1212,6 +1211,9 @@ body.modal-open { overflow: hidden; }
     height: auto;
     max-height: 420px;
   }
+  .modal {
+  overflow-y: auto;
+}
   
   .modal-gallery.images .gallery-img:only-child {
     height: auto;
