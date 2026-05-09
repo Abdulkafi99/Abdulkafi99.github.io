@@ -1191,34 +1191,27 @@ body.modal-open { overflow: hidden; }
 /* ============ RESPONSIVE — MOBILE ============ */
 /* ============ RESPONSIVE — TABLET (small) ============ */
 @media (max-width: 720px) {
-  .modal-gallery.images {
-    grid-template-columns: 1fr;
-    padding: 14px;
-    gap: 12px;
-  }
-  
-  /* الصور: استخدم contain + ارتفاع أكبر = الصورة كاملة */
-  .modal-gallery.images .gallery-img {
-    height: auto;
-    max-height: 380px;
-    object-fit: contain;
-    background: oklch(0.10 0.005 250);
-    padding: 8px;
-  }
-  
-  .modal-gallery.images .gallery-img.featured {
-    grid-column: span 1;
-    height: auto;
-    max-height: 420px;
-  }
-  .modal {
+.modal {
   overflow-y: auto;
+  overflow-x: hidden;
 }
-  
-  .modal-gallery.images .gallery-img:only-child {
-    height: auto;
-    max-height: 460px;
-  }
+
+.modal-gallery.images {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  gap: 12px;
+}
+
+.modal-gallery.images .gallery-img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: oklch(0.10 0.005 250);
+  border-radius: 12px;
+}
 }
 
 /* ============ RESPONSIVE — MOBILE ============ */
