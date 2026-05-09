@@ -1191,9 +1191,15 @@ body.modal-open { overflow: hidden; }
 /* ============ RESPONSIVE — MOBILE ============ */
 /* ============ RESPONSIVE — TABLET (small) ============ */
 @media (max-width: 720px) {
+@media (max-width: 720px) {
+
 .modal {
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.modal-gallery {
+  overflow: visible;
 }
 
 .modal-gallery.images {
@@ -1213,14 +1219,16 @@ body.modal-open { overflow: hidden; }
   padding: 6px;
 }
 
-/* صورة وحدة فقط */
 .modal-gallery.images .gallery-img:only-child {
   grid-column: 1 / -1;
   height: 220px;
 }
+
 .modal-gallery.images .gallery-img.featured {
   grid-column: span 1;
   height: 150px;
+}
+
 }
 }
 
